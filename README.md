@@ -6,11 +6,11 @@ A API Gerencial é uma aplicação backend desenvolvida com AdonisJS 6 e TypeScr
 
 ## Funcionalidades
 
-    Autenticação: Sistema de login seguro com suporte a tokens.
-    Gestão de Usuários: CRUD completo para usuários do sistema.
-    Gestão de Estabelecimentos: CRUD para gerenciar informações de estabelecimentos.
-    Gestão de Terminais: Operações para criar, listar e atualizar terminais.
-    Transações: Consulta e repasse de recebimentos, integrando com plataformas externas.
+Autenticação: Sistema de login seguro com suporte a tokens.
+Gestão de Usuários: CRUD completo para usuários do sistema.
+Gestão de Estabelecimentos: CRUD para gerenciar informações de estabelecimentos.
+Gestão de Terminais: Operações para criar, listar e atualizar terminais.
+Transações: Consulta e repasse de recebimentos, integrando com plataformas externas.
 
 ## Documentação da API
 
@@ -64,4 +64,5 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir pull requests ou
 
 ## Autores
 
-    Diogo Perez Areco - [text](https://github.com/diogo-perez)
+Diogo Perez Areco - [text](https://github.com/diogo-perez)
+
