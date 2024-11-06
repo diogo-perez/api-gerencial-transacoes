@@ -46,14 +46,16 @@ Acesse a API através do endpoint base: http://localhost:3333/api/v1.
 
 ## Exemplos de Requisições
 
+
+```
 Login:
-`POST /api/v1/login `
+POST /api/v1/login
+
 Listar Usuários:
-`GET /api/v1/usuarios`
+`GET /api/v1/usuarios
+
 Criar Terminal:
-
-```POST /api/v1/terminais
-
+POST /api/v1/terminais
 ```
 
 ## Contribuição
