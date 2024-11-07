@@ -6,7 +6,9 @@
     "outDir": "./build",
     "baseUrl": ".",
     "paths": {
-      "#controllers/*": ["app/Controllers/*"]
+      "#controllers/*": ["app/controllers/*"],
+      "services/*": ["app/services/*"],
+      "app/*": ["app/*"]
     }
   }
 }

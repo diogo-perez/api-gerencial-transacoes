@@ -1,8 +1,8 @@
 import Estabelecimento from '#models/Estabelecimento'
 import { HttpContext } from '@adonisjs/core/http'
-import UseIntegration from 'app/integration/UseIntegration.js'
-import { Dados, Pagamento, Recebimento, Transacao } from 'app/interfaces/UseInterface.js'
-import { formatarData, isValidaFormatoData } from 'app/utils/format.js'
+import UseIntegration from '../integration/UseIntegration.js'
+import { Dados, Pagamento, Recebimento, Transacao } from '../interfaces/UseInterface.js'
+import { formatarData, isValidaFormatoData } from '../utils/format.js'
 
 /**
  * UseService é uma classe responsável por manipular operações relacionadas a estabelecimentos,
@@ -245,13 +245,12 @@ export default class UseService {
    * @returns {string} - Retorna uma string representando o tipo de pagamento.
    */
   private tipoPagamento(tipo: string, cobranca: string): string {
-    switch (tipo) {
-      case 'PIX':
-        return 'PIX'
-      case 'BOLETO':
-        return cobranca === 'BOLETO_PIX' ? 'PIX' : 'BOLETO'
-      default:
-        return 'OUTRO'
+    if (cobranca === 'BOLETO_PIX') {
+      if (tipo === 'PIX') return 'QRCODE BOLETO'
+      if (tipo === 'BOLETO') return 'BOLETO'
+    } else if (cobranca === 'PIX_AVULSO' && tipo === 'PIX') {
+      return 'PIX'
     }
+    return 'OUTROS'
   }
 }
